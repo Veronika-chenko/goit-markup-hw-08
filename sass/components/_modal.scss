@@ -1,0 +1,205 @@
+.backdrop {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.7;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    width: 100%;
+    @include mobile {
+        width: 450px;
+        min-height: 609px;
+    }
+    
+    @include desktop {
+        width: 528px;
+        min-height: 581px;
+    }
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    fill: #000000;
+    transition: fill 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-title {
+    @include font (700, 20px, 1.5, 0.03em);
+    @include desktop {
+        @include font (null, 20px, 1.15, 0.03em);
+    }
+    text-align: center;
+    color: var(--modal-title-color);
+    margin-bottom: 12px;
+}
+
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-input-wrap {
+    position: relative;
+}
+.modal-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms var(--timing-function);
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    fill: var(--modal-title-color);
+    transition: fill 250ms var(--timing-function);
+    .modal-input:focus+& {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+
+.user-text {
+    width: 100%;
+    height: 120px;
+    display: block;
+    resize: none;
+
+    padding: 12px 16px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms var(--timing-function);
+    
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+/* -------------------MODAL-CHECKBOX--------------- */
+
+.label-check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @include font (null, 12px, 2, 0.03em); 
+    @include desktop {
+        line-height: 1.71;
+    }
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.label-check::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--modal-title-color);
+    border-radius: 2px;
+    // margin-right: 8px;
+    margin-right: 7px;
+
+    .input-check:focus+&,
+    .input-check:checked+& {
+        background-color: var(--accent-color);
+        border: none;
+        background-image: url(../images/modal-check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.check-accent {
+    position: relative;
+    color: var(--accent-color);
+    @include font (null, 12px, 2, 0.03em);
+    
+    @include desktop {
+        line-height: 1.71;
+    }
+}
+
+.check-accent::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 18px;
+
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-color);
+}
+
+.modal-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

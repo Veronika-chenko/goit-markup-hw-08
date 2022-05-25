@@ -1,0 +1,145 @@
+.footer {
+    background-color: var(--footer-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .container {
+    text-align: center;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+    @include desktop {
+        text-align: start;
+    }
+}
+
+.footer-connect {
+    margin-bottom: 60px;
+    @include tablet {
+        margin-right: 165px;
+    }
+    @include desktop {
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer-logo .accent {
+    color: #ffffff;
+}
+
+.footer-connect-item:not(:last-child) {
+    @media screen and (max-width: 1999px) {
+        margin-bottom: 8px;
+    }
+    @include desktop {
+        margin-bottom: 9px;
+    }
+}
+.footer-connect-link {
+    font-style: normal;
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--secondary-footer-color);
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+.state-link {
+    color: #ffffff;
+}
+
+.footer-action-text {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    @include font (700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+}
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+
+.footer-soc-item+.footer-soc-item {
+    margin-left: 10px;
+}
+
+.footer-soc-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #ffffff;
+    transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: #ffffff;
+    }
+}
+
+.footer-form {
+    @include desktop {
+        display: flex;
+        align-items: end;
+        margin-left: auto;
+    }
+}
+.footer-form-field {
+
+    height: 100%;
+    @include desktop {
+        margin-right: 10px;
+    }
+}
+
+.footer-label {
+    display: block;
+}
+
+.footer-input {
+    width: 100%;
+    @include tablet {
+        width: 450px;
+    }
+    @include desktop {
+        width: 358px;
+    }
+    height: 50px;
+    padding-left: 16px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.footer-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-send-icon {
+    margin-left: 10px;
+}

@@ -1,0 +1,263 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+        @include tablet {
+            height: 80px;
+        }
+
+    border-bottom: 1px solid #ECECEC;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+.header .logo__accent {
+    color: var(--header-main-color);
+}
+.menu-button {
+    display: block;
+
+    @include tablet {
+        display: none;
+    }
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-open-icon {
+    fill: var(--header-main-color);
+    transition: fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.header-nav {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+.menu-list {
+    display: flex;
+}
+.menu-list__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.menu-list__link {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--header-main-color);
+    
+    @include font (500, 14px, 1.14, 0.02em);
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    &.current {
+        color: var(--accent-color);
+    }
+
+    &.current::after {
+        display: block;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -1px;
+        content: '';
+        display: none;
+        height: 4px;
+        width: 100%;
+        background: var(--accent-color);
+        border-radius: 2px;
+    }
+}
+.header-connect {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+    margin-left: auto;
+}
+.connect-list {
+    display: block;
+    @include desktop {
+        display: flex;
+    }
+}
+.connect-list__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    @include desktop {
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.connect-list__link {
+    display: flex;
+    align-items: center;
+    @include font (500, 12px, 1.17, 0.02em);
+
+    @include desktop {
+        @include font (null, 14px, 1.14, 0.02em);
+    }
+    color: var(--header-secondary-color);
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.connect-list__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+.mob-menu {
+    display: block;
+    @include tablet {
+        display: none;
+    }
+
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 48px 0 48px 40px;
+
+    .mob-container {
+        display: block;
+    }
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.menu-close-icon {
+    fill: var(--header-main-color);
+    transition: fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.mob-menu-list {
+    margin-bottom: 302px;
+}
+
+.mob-menu-item,
+.mob-connect-item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mob-menu-link {
+    @include font (500, 40px, 1.18, 0.02em);
+    color: var(--header-main-color);
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    &.current {
+        color: var(--accent-color);
+    }
+}
+
+.mob-connect-list {
+    margin-bottom: 64px;
+}
+
+.mob-connect-link {
+    color: var(--header-secondary-color);
+    transition: color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.mob-connect-tel {
+    @include font (500, 34px, 1.25, 0.02em);
+}
+
+.mob-connect-mail {
+    @include font (500, 24px, 1.17, 0.02em);
+}
+
+.mob-soc-list {
+    display: flex;
+}
+
+// .mob-soc-item {
+//     flex-basis: calc(100% / 4 - 10px);
+//     // border: 1px solid rgba(33, 33, 33, 0.2);
+// }
+// .mob-soc-item {
+//     &:not(:last-child) {
+//         margin-right: 20px;
+//     }
+// }
+.mob-soc-link {
+    display: block;
+    @include font (500, 18px, 1.22, 0.02em);
+    color: var(--accent-color);
+    // position: relative;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
