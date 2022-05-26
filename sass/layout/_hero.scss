@@ -36,14 +36,14 @@
         padding-top: 200px;
         padding-bottom: 200px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                    rgba(47, 48, 58, 0.4)),
+                rgba(47, 48, 58, 0.4)),
                 url("../images/hero-bg-desk.jpg");
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192),
         (min-resolution: 2) {
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                        rgba(47, 48, 58, 0.4)),
-                    url("../images/hero-bg-desk-2x.jpg");
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url("../images/hero-bg-desk-2x.jpg");
         }
     }
 

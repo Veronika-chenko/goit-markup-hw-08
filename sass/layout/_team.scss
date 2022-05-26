@@ -10,31 +10,8 @@
         margin-left: -30px;
     }
 }
-// .team-list {
-//     margin: 0;
-//     @include tablet {
-//         display: flex;
-//         flex-wrap: wrap;
-//         margin: -5px;
-//     }
-// }
-// .team-list__item {
-//     @media screen and (max-width: 767px) {
-//         &:not(:last-child) {
-//             margin-bottom: 20px;
-//         }
-//     }
-//     @include tablet {
-//         flex-basis: calc((100% - 4 * 5px) / 2);
-//         margin: 5px;
-//     }
-//     @include desktop {
-//         flex-basis: calc((100% - 8 * 5px) / 4);
-//     }
-// }
+
 .team-list__item {
-    // check the margin-bottom: 30px; below, 
-    // if it's needed for all items?
     margin-bottom: 30px;
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),

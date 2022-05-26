@@ -3,7 +3,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
 .footer .container {
     text-align: center;
     @include tablet {
@@ -16,7 +15,6 @@
         text-align: start;
     }
 }
-
 .footer-connect {
     margin-bottom: 60px;
     @include tablet {
@@ -27,7 +25,6 @@
         margin-bottom: 0;
     }
 }
-
 .footer-logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -35,13 +32,12 @@
 .footer-logo .accent {
     color: #ffffff;
 }
-
-.footer-connect-item:not(:last-child) {
-    @media screen and (max-width: 1999px) {
+.footer-connect-item {
+    &:not(:last-child) {
         margin-bottom: 8px;
-    }
-    @include desktop {
-        margin-bottom: 9px;
+        @include desktop {
+            margin-bottom: 9px;
+        }
     }
 }
 .footer-connect-link {
@@ -80,13 +76,14 @@
 }
 
 .footer-soc-link {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
     fill: #ffffff;
     transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
 
@@ -105,13 +102,10 @@
     }
 }
 .footer-form-field {
-
-    height: 100%;
     @include desktop {
         margin-right: 10px;
     }
 }
-
 .footer-label {
     display: block;
 }
@@ -139,7 +133,6 @@
     align-items: center;
     margin-top: 20px;
 }
-
 .footer-send-icon {
     margin-left: 10px;
 }

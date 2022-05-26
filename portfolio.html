@@ -14,12 +14,16 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
             <a href="/" class="logo header__logo link">
                 Web<span class="logo__accent">Studio</span>
             </a>
+            <button type="button" class="menu-open-btn menu-button">
+                <svg class="menu-open-icon" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-open-menu"></use>
+                </svg>
+            </button>
             <nav class="header-nav">
                 <ul class="menu-list list">
                     <li class="menu-list__item"><a href="./index.html" class="menu-list__link link">Студия</a></li>
@@ -43,6 +47,39 @@
                             </svg>+38 096 111 11 11</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="mob-menu is-hidden">
+            <div class="mob-container">
+                <button type="button" class="menu-close-btn menu-button">
+                    <svg class="menu-close-icon" width="40" height="40">
+                        <use href="./images/symbol-defs.svg#icon-close-menu"></use>
+                    </svg>
+                </button>
+                <ul class="mob-menu-list list">
+                    <li class="mob-menu-item"><a href="./index.html" class="mob-menu-link link">Студия</a></li>
+                    <li class="mob-menu-item"><a href="./portfolio.html" class="mob-menu-link link current">Портфолио</a></li>
+                    <li class="mob-menu-item"><a href="" class="mob-menu-link link">Контакты</a></li>
+                </ul>
+                <ul class="mob-connect-list list">
+                    <li class="mob-connect-item">
+                        <a href="tel:+380961111111" class="mob-connect-link mob-connect-tel link">
+                            +38 096 111 11 11</a>
+                    </li>
+                    <li class="mob-connect-item">
+                        <a href="mailto:info@devstudio.com" class="mob-connect-link mob-connect-mail link">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+                <div class="mob-soc">
+                    <ul class="mob-soc-list list">
+                        <li class="mob-soc-item"><a href="" class="mob-soc-link link">Instagram</a></li>
+                        <li class="mob-soc-item"><a href="" class="mob-soc-link link">Twitter</a></li>
+                        <li class="mob-soc-item"><a href="" class="mob-soc-link link">Facebook</a></li>
+                        <li class="mob-soc-item"><a href="" class="mob-soc-link link">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -74,26 +111,23 @@
                                     исчерпывающие сведения о компании или частном лице.
                                 </p>
                             </div>
-                            <div class="works-info work-exept">
+                            <div class="works-info">
                                 <h2 class="works-title">Технокряк</h2>
                                 <p class="works-text">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
-                                    <source
-                                        srcset="./images/work-2-desk.jpg 1x, ./images/work-2-desk-2x.jpg 2x" media="(min-width:1200px)">
-                                    <source 
-                                        srcset="./images/work-2-tab.jpg 1x, ./images/work-2-tab-2x.jpg 2x" media="(min-width:768px)">
-                                    <source 
-                                        srcset="./images/work-2-mob.jpg 1x, ./images/work-2-mob.jpg 2x" media="(min-width:480px)">
+                                    <source srcset="./images/work-2-desk.jpg 1x, ./images/work-2-desk-2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/work-2-tab.jpg 1x, ./images/work-2-tab-2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/work-2-mob.jpg 1x, ./images/work-2-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-2-mob.jpg" alt="Постер New Orlean vs Golden Star">
                                 </picture>
-                                <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю
+                                <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                    сервисов. Все это позволит посетителю
                                     получить
                                     исчерпывающие сведения о компании или частном лице.
                                 </p>
@@ -105,19 +139,16 @@
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
-                                    <source srcset="./images/work-3-desk.jpg 1x,
-                                        ./images/work-3-desk-2x.jpg 2x" media="(min-width:1200px)">
-                                    <source srcset="./images/work-3-tab.jpg 1x,
-                                        ./images/work-3-tab-2x.jpg 2x" media="(min-width:768px)">
-                                    <source srcset="./images/work-3-mob.jpg 1x, 
-                                        ./images/work-3-mob.jpg 2x" media="(min-width:480px)">
+                                    <source srcset="./images/work-3-desk.jpg 1x, ./images/work-3-desk-2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/work-3-tab.jpg 1x, ./images/work-3-tab-2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/work-3-mob.jpg 1x, ./images/work-3-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-3-mob.jpg" alt="Ресторан Seafood">
                                 </picture>
-                                <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
-                                    позволит посетителю
+                                <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                                    сервисов. Все это позволит посетителю
                                     получить
                                     исчерпывающие сведения о компании или частном лице.
                                 </p>
@@ -128,16 +159,14 @@
                             </div>
                         </a>
                     </li>
+                
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
-                                    <source srcset="./images/work-4-desk.jpg 1x,
-                                        ./images/work-4-desk-2x.jpg 2x" media="(min-width:1200px)">
-                                    <source srcset="./images/work-4-tab.jpg 1x,
-                                        ./images/work-4-tab-2x.jpg 2x" media="(min-width:768px)">
-                                    <source srcset="./images/work-4-mob.jpg 1x, 
-                                        ./images/work-4-mob.jpg 2x" media="(min-width:480px)">
+                                    <source srcset="./images/work-4-desk.jpg 1x, ./images/work-4-desk-2x.jpg 2x" media="(min-width:1200px)">
+                                    <source srcset="./images/work-4-tab.jpg 1x, ./images/work-4-tab-2x.jpg 2x" media="(min-width:768px)">
+                                    <source srcset="./images/work-4-mob.jpg 1x, ./images/work-4-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-4-mob.jpg" alt="Проект Prime">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -153,7 +182,7 @@
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
                                     <source srcset="./images/work-5-desk.jpg 1x,
@@ -161,7 +190,7 @@
                                     <source srcset="./images/work-5-tab.jpg 1x,
                                         ./images/work-5-tab-2x.jpg 2x" media="(min-width:768px)">
                                     <source srcset="./images/work-5-mob.jpg 1x, 
-                                        ./images/work-5-mob.jpg 2x" media="(min-width:480px)">
+                                        ./images/work-5-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-5-mob.jpg" alt="Проект Boxes">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -177,7 +206,7 @@
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
                                     <source srcset="./images/work-6-desk.jpg 1x,
@@ -185,7 +214,7 @@
                                     <source srcset="./images/work-6-tab.jpg 1x,
                                         ./images/work-6-tab-2x.jpg 2x" media="(min-width:768px)">
                                     <source srcset="./images/work-6-mob.jpg 1x, 
-                                        ./images/work-6-mob.jpg 2x" media="(min-width:480px)">
+                                        ./images/work-6-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-6-mob.jpg" alt="Inspiration has no Borders">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -201,7 +230,7 @@
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
                                     <source srcset="./images/work-7-desk.jpg 1x,
@@ -209,7 +238,7 @@
                                     <source srcset="./images/work-7-tab.jpg 1x,
                                         ./images/work-7-tab-2x.jpg 2x" media="(min-width:768px)">
                                     <source srcset="./images/work-7-mob.jpg 1x, 
-                                        ./images/work-7-mob.jpg 2x" media="(min-width:480px)">
+                                        ./images/work-7-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-7-mob.jpg" alt="Издание Limited Edition">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -225,7 +254,7 @@
                         </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                            <div class="works-cover">
                                 <picture>
                                     <source srcset="./images/work-8-desk.jpg 1x,
@@ -233,7 +262,7 @@
                                     <source srcset="./images/work-8-tab.jpg 1x,
                                         ./images/work-8-tab-2x.jpg 2x" media="(min-width:768px)">
                                     <source srcset="./images/work-8-mob.jpg 1x, 
-                                        ./images/work-8-mob.jpg 2x" media="(min-width:480px)">
+                                        ./images/work-8-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-8-mob.jpg" alt="Проект LAB">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -246,10 +275,10 @@
                                 <h2 class="works-title">Проект <span lang="en">LAB</span></h2>
                                 <p class="works-text">Маркетинг</p>
                             </div>
-        
+                        </a>
                     </li>
                     <li class="works-item">
-                        <a href="" class="link">
+                        <a href="" class="works-link link">
                             <div class="works-cover">
                                 <picture>
                                     <source srcset="./images/work-9-desk.jpg 1x,
@@ -257,7 +286,7 @@
                                     <source srcset="./images/work-9-tab.jpg 1x,
                                         ./images/work-9-tab-2x.jpg 2x" media="(min-width:768px)">
                                     <source srcset="./images/work-9-mob.jpg 1x, 
-                                        ./images/work-9-mob.jpg 2x" media="(min-width:480px)">
+                                        ./images/work-9-mob-2x.jpg 2x" media="(min-width:480px)">
                                     <img src="./images/work-9-mob.jpg" alt="Growing Business">
                                 </picture>
                                 <p class="works-cover-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -335,7 +364,8 @@
             </form>
         </div>
     </footer>
+    
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
-
 </html>

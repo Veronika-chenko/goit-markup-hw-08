@@ -4,18 +4,9 @@
     line-height: $lh;
     letter-spacing: $ls;
 }
-@mixin until-tablet {
-   @media screen and (max-width: 767px) {
-       @content;
-   } 
-}
+
 @mixin mobile {
     @media screen and (min-width: 480px) {
-        @content;
-    }
-}
-@mixin tablet-only {
-    @media screen and (min-width: 768px) and (max-width: 1999px) {
         @content;
     }
 }
@@ -24,14 +15,8 @@
         @content;
     }
 }
-@mixin unti-desktop {
-    @media screen and (max-width: 1999px) {
-        @content;
-    }
-}
 @mixin desktop {
     @media screen and (min-width: 1200px) {
         @content;
     }
 }
-// ////////

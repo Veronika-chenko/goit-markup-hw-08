@@ -25,10 +25,15 @@
             1px 4px 6px rgba(0, 0, 0, 0.16);
     }
 }
-
+.works-link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .works-cover {
     position: relative;
     overflow: hidden;
+    max-height: 294px;
 }
 
 .works-cover-text {
@@ -52,9 +57,7 @@
         transform: translateY(0px);
     }
 }
-.works-link {
-    height: 100%;
-}
+
 .works-info {
     width: 100%;
     padding: 20px 24px;
@@ -62,14 +65,7 @@
     border-right: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     pointer-events: none;
-}
-.work-exept {
-    @include tablet {
-        padding: 20px 24px 56px;
-    }
-    @include desktop {
-        padding: 20px 24px;
-    }
+    flex-grow: 1;
 }
 .works-title {
     margin-bottom: 4px;
