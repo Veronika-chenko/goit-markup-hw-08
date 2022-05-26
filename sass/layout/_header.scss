@@ -7,16 +7,16 @@
         @include tablet {
             height: 80px;
         }
-
+    z-index: 100;
     border-bottom: 1px solid #ECECEC;
     background-color: #ffffff;
-    z-index: 100;
-}
-
-.header .container {
-    display: flex;
-    align-items: center;
-    height: inherit;
+    
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: inherit;
+    }
 }
 
 .header__logo {
@@ -32,7 +32,6 @@
     @include tablet {
         display: none;
     }
-
     position: absolute;
     top: 10px;
     right: 15px;
@@ -50,7 +49,6 @@
         fill: var(--accent-color);
     }
 }
-
 
 .header-nav {
     display: none;

@@ -377,131 +377,23 @@ body {
   margin-right: auto;
 }
 
-.mob-menu {
-  display: block;
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  padding: 48px 15px 48px 40px;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
-}
-@media screen and (min-width: 768px) {
-  .mob-menu {
-    display: none;
-  }
-}
-.mob-menu .mob-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.mob-menu.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.mob-menu-list {
-  flex-grow: 1;
-}
-
-.mob-menu-item:not(:last-child),
-.mob-connect-item:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-.mob-menu-link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: var(--header-main-color);
-  transition: color 250ms var(--timing-function);
-}
-.mob-menu-link:hover, .mob-menu-link:focus {
-  color: var(--accent-color);
-}
-.mob-menu-link.current {
-  color: var(--accent-color);
-}
-
-.mob-connect-list {
-  margin-bottom: 64px;
-}
-
-.mob-connect-link {
-  color: var(--header-secondary-color);
-  transition: color 250ms var(--timing-function);
-}
-.mob-connect-link:hover, .mob-connect-link:focus {
-  color: var(--accent-color);
-}
-
-.mob-connect-tel {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
-}
-
-.mob-connect-mail {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-}
-
-.mob-soc-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-}
-
-.mob-soc-item {
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-.mob-soc-item:not(:last-child) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.mob-soc-link {
-  display: block;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   height: 60px;
+  z-index: 100;
   border-bottom: 1px solid #ECECEC;
   background-color: #ffffff;
-  z-index: 100;
 }
 @media screen and (min-width: 768px) {
   .header {
     height: 80px;
   }
 }
-
 .header .container {
+  position: relative;
   display: flex;
   align-items: center;
   height: inherit;
@@ -640,6 +532,115 @@ body {
 .connect-list__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mob-menu {
+  display: block;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+.mob-menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mob-menu .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 48px 15px 48px 40px;
+}
+
+.mob-menu-list {
+  flex-grow: 1;
+}
+
+.mob-menu-item:not(:last-child),
+.mob-connect-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--header-main-color);
+  transition: color 250ms var(--timing-function);
+}
+.mob-menu-link:hover, .mob-menu-link:focus {
+  color: var(--accent-color);
+}
+.mob-menu-link.current {
+  color: var(--accent-color);
+}
+
+.mob-connect-list {
+  margin-bottom: 64px;
+}
+
+.mob-connect-link {
+  color: var(--header-secondary-color);
+  transition: color 250ms var(--timing-function);
+}
+.mob-connect-link:hover, .mob-connect-link:focus {
+  color: var(--accent-color);
+}
+
+.mob-connect-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-connect-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mob-soc-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.mob-soc-item {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.mob-soc-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-link {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .hero {
