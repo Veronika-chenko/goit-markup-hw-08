@@ -61,6 +61,7 @@
     cursor: pointer;
     fill: #000000;
     transition: fill 250ms var(--timing-function);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     &:hover,
     &:focus {
         fill: var(--accent-color);

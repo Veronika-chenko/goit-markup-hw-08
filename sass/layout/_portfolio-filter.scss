@@ -43,7 +43,8 @@
         background-color 250ms var(--timing-function);
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.current {
         color: var(--main-button-color);
         background-color: var(--accent-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
