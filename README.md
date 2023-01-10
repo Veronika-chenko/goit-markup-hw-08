@@ -1,14 +1,12 @@
-## Web Studio ##
+## Web Studio
 
-This two-pages responsive website is my first work experience with **base web technologies:**
+This is a colorful two-page adaptive website for Webstudio that gives a brief information about the company and shows its works.
+
+**Technologies used:**
 
 - HTML
-- CSS
+- CSS and SASS preprocessor
 - JavaScript
+- BEM methodology
 
-**Also I mastered:**
-- The Mobile First approach
-- The SASS preprocessor
-- BEM methodology 
-
-*the last one you can see in the **Header** and **Team** sections
+\*the last one you can see in the **Header** and **Team** sections
