@@ -687,7 +687,7 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-bg-desk.jpg");
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192), screen and (min-width: 1200px) and (min-resolution: 2) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-bg-desk-2x.jpg");
   }
@@ -806,14 +806,13 @@ body {
 }
 
 .about-list {
-  display: flex;
-  margin-left: -30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
 }
 
 .about-item {
   position: relative;
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
 }
 
 .about-title {

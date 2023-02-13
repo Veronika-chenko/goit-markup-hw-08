@@ -5,14 +5,13 @@
     }
 }
 .about-list {
-    display: flex;
-    margin-left: -30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
 }
 
 .about-item {
     position: relative;
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
 }
 
 .about-title {
