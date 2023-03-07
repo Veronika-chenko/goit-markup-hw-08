@@ -10,10 +10,7 @@
         const btnType = btn.dataset.type;
     
         btn.addEventListener('click', () => {
-            if(currentBtn === btn) {
-                console.log('the same');
-                return;
-            };
+            if(currentBtn === btn) return;
 
             currentBtn.classList.remove('current');
             currentBtn = btn;
