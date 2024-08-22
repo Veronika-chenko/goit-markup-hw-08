@@ -568,7 +568,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   height: 100%;
-  padding: 48px 15px 48px 40px;
+  padding: 48px 15px 68px 40px;
 }
 
 .mob-menu-list {
@@ -735,7 +735,7 @@ body {
   width: 100%;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .features-item:last-child {
     margin-bottom: 0px;
   }
@@ -780,7 +780,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .features-title {
     text-align: center;
   }
@@ -934,7 +934,7 @@ body {
   margin-left: 30px;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .clients-item:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
@@ -996,7 +996,7 @@ body {
 .works-filter-item:not(:last-child) {
   margin-right: 8px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .works-filter-item:not(:nth-last-child(-n+2)) {
     margin-bottom: 15px;
   }
@@ -1085,25 +1085,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   height: 100%;
   transform: translateY(101%);
   transition: transform 250ms var(--timing-function);
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-  padding: 77px, 24px;
+  padding: 24px;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
-}
-@media screen and (min-width: 768px) {
-  .works-cover-text {
-    padding: 49px, 24px, 77px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .works-cover-text {
-    padding: 63px 24px;
-  }
 }
 .works-item:hover .works-cover-text {
   transform: translateY(0px);
@@ -1112,9 +1104,9 @@ body {
 .works-info {
   width: 100%;
   padding: 20px 24px;
-  border-bottom: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   pointer-events: none;
   flex-grow: 1;
 }

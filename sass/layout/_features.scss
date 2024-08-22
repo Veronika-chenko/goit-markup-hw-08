@@ -1,60 +1,60 @@
 .features {
-    @include desktop {
-        padding-bottom: 0px;
-    }
+  @include desktop {
+    padding-bottom: 0px;
+  }
 }
 .features-list {
-    @include tablet {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
-    }
+  }
 }
 .features-item {
-    width: 100%;
-    margin-bottom: 30px;
-    @media screen and (max-width: 767px) {
-        &:last-child {
-            margin-bottom: 0px;
-        }
+  width: 100%;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767.98px) {
+    &:last-child {
+      margin-bottom: 0px;
     }
-    @include tablet {
-        flex-basis: calc(100% / 2 - 30px);
-        margin-left: 30px;
-        &:nth-last-child(-n + 2) {
-            margin-bottom: 0;
-        }
+  }
+  @include tablet {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
     }
-    @include desktop {
-        flex-basis: calc(100% / 4 - 30px);
-    }
+  }
+  @include desktop {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 .features-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    background-color: var(--secondary-background-color);
-    
-    width: 100%;
-    height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+
+  width: 100%;
+  height: 120px;
 }
 .features-icon {
-    display: block;
-    width: 70px;
-    height: 70px;
+  display: block;
+  width: 70px;
+  height: 70px;
 }
 .features-title {
-    margin-bottom: 10px;
-    color: var(--title-text-color);
-    @include font (null, 14px, 1.14, 0.03em);
-    text-transform: uppercase;
-    
-    @media screen and (max-width: 767px) {
-        text-align: center;
-    }
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  @include font(null, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+
+  @media screen and (max-width: 767.98px) {
+    text-align: center;
+  }
 }
 .features-text {
-    @include font (null, 14px, 1.71, 0.03em);
+  @include font(null, 14px, 1.71, 0.03em);
 }
